@@ -9,3 +9,6 @@ httpx
 pytest
 pytest-asyncio
 gunicorn
+streamlit
+requests
+python-dotenv
