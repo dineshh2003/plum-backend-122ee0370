@@ -25,3 +25,16 @@ class ValidateResponse(BaseModel):
     valid: bool
     errors: List[str]
     recommended_fix: Optional[Dict[str, Any]] = None
+
+class ChainRunRequest(BaseModel):
+    chain: List[str]
+    input: Dict[str, Any]
+
+class ChainStepOutput(BaseModel):
+    step: str
+    output: Dict[str, Any]
+
+class ChainRunResponse(BaseModel):
+    input: Dict[str, Any]
+    steps: List[ChainStepOutput]
+    final: Dict[str, Any]
